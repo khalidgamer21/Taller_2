@@ -84,14 +84,19 @@ public class GestorPersonas {
                 .findFirst();
         desarrolladora.ifPresent(p -> System.out.println("\nPrimera desarrolladora encontrada: " + p));
 
+        // c. Desarrollador que más gana por hora
+        Optional<Persona> masGana = personas.stream()
+                .filter(p -> p.getCargo().equals("desarrollador"))
+                .max(Comparator.comparing(Persona::getSueldoHora));
 
+        if (masGana.isPresent()) {
+            System.out.println("\nDesarrollador que más gana por hora:");
+            System.out.println(masGana.get());
+        } else {
+            System.out.println("\nNo hay desarrolladores en la lista.");
+        }
 
-
-
-
-
-
-
+        scanner.close();
 
     }
 }
