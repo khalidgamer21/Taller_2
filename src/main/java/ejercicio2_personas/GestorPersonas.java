@@ -78,6 +78,12 @@ public class GestorPersonas {
                 .map(p -> p.getSueldoHora() * 8)
                 .forEach(sueldo -> System.out.println("Sueldo por 8 horas: $" + sueldo));
 
+        // b. Primera desarrolladora (F)
+        Optional<Persona> desarrolladora = personas.stream()
+                .filter(p -> p.getCargo().equals("desarrollador") && p.getGenero().equals("F"))
+                .findFirst();
+        desarrolladora.ifPresent(p -> System.out.println("\nPrimera desarrolladora encontrada: " + p));
+
 
 
 
