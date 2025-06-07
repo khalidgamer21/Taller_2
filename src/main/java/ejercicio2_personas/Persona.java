@@ -32,4 +32,10 @@ public class Persona {
     public void setSueldoHora(double sueldoHora) { this.sueldoHora = sueldoHora; }
     public void setCargo(String cargo) { this.cargo = cargo; }
 
+    @Override
+    public String toString() {
+        return nombre + " " + apellido + ", Edad: " + edad + ", Género: " + genero +
+                ", Cargo: " + cargo + ", Sueldo/hora: $" + sueldoHora;
+    }
+
 }
