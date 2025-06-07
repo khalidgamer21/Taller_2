@@ -62,6 +62,14 @@ public class GestorPersonas {
                 .filter(p -> p.getNombre().toLowerCase().startsWith("a"))
                 .forEach(p -> System.out.println("  - " + p.getNombre()));
 
+        // e. Personas con apellido que contiene 'M'
+        System.out.println("Personas con apellido que contiene 'M':");
+        personas.stream()
+                .filter(p -> p.getApellido().toLowerCase().contains("m"))
+                .forEach(p -> System.out.println("  - " + p.getApellido()));
+
+
+
 
 
 
