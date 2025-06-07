@@ -50,6 +50,14 @@ public class GestorPersonas {
                 .orElse(0);
         System.out.println("Promedio de edades: " + promedioEdad);
 
+        // c. Personas mayores de edad
+        long mayoresEdad = personas.stream()
+                .filter(p -> p.getEdad() >= 18)
+                .count();
+        System.out.println("Cantidad de personas mayores de edad: " + mayoresEdad);
+
+
+
 
 
 
