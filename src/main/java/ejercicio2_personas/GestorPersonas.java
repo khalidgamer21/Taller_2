@@ -35,5 +35,14 @@ public class GestorPersonas {
         } while (opcion.equals("s"));
 
         System.out.println("\n=== Estadísticas con Streams ===");
+
+
+
+
+        // a. Cantidad de personas
+        long totalPersonas = personas.stream().count();
+        System.out.println("Cantidad total de personas: " + totalPersonas);
+
+
     }
 }
