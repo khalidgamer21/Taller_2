@@ -61,3 +61,20 @@ private static String seleccionarTipo(Scanner scanner) {
         }
     }
 }
+
+private static String seleccionarGenero(Scanner scanner) {
+    while (true) {
+        System.out.println("Selecciona el género:");
+        System.out.println("M. Masculino");
+        System.out.println("F. Femenino");
+        System.out.print("Opción: ");
+        String opcion = scanner.nextLine().toLowerCase();
+
+        switch (opcion) {
+            case "m": return "masculino";
+            case "f": return "femenino";
+            default:
+                System.out.println("Opción no válida. Intenta nuevamente.");
+        }
+    }
+}
