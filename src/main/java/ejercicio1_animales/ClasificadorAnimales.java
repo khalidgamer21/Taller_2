@@ -40,41 +40,48 @@ public class ClasificadorAnimales {
         scanner.close();
 
     }
-}
 
 
-private static String seleccionarTipo(Scanner scanner) {
-    while (true) {
-        System.out.println("Selecciona el tipo de animal:");
-        System.out.println("1. Terrestre");
-        System.out.println("2. Acuático");
-        System.out.println("3. Aéreo");
-        System.out.print("Opción: ");
-        String opcion = scanner.nextLine();
 
-        switch (opcion.toLowerCase()) {
-            case "1": case "t": return "terrestre";
-            case "2": case "a": return "acuatico";
-            case "3": case "e": return "aereo";
-            default:
-                System.out.println("Opción no válida. Intenta nuevamente.");
+    private static String seleccionarTipo(Scanner scanner) {
+        while (true) {
+            System.out.println("Selecciona el tipo de animal:");
+            System.out.println("1. Terrestre");
+            System.out.println("2. Acuático");
+            System.out.println("3. Aéreo");
+            System.out.print("Opción: ");
+            String opcion = scanner.nextLine();
+
+            switch (opcion.toLowerCase()) {
+                case "1": case "t": return "terrestre";
+                case "2": case "a": return "acuatico";
+                case "3": case "e": return "aereo";
+                default:
+                    System.out.println("Opción no válida. Intenta nuevamente.");
+            }
         }
     }
-}
 
-private static String seleccionarGenero(Scanner scanner) {
-    while (true) {
-        System.out.println("Selecciona el género:");
-        System.out.println("M. Masculino");
-        System.out.println("F. Femenino");
-        System.out.print("Opción: ");
-        String opcion = scanner.nextLine().toLowerCase();
+    private static String seleccionarGenero(Scanner scanner) {
+        while (true) {
+            System.out.println("Selecciona el género:");
+            System.out.println("M. Masculino");
+            System.out.println("F. Femenino");
+            System.out.print("Opción: ");
+            String opcion = scanner.nextLine().toLowerCase();
 
-        switch (opcion) {
-            case "m": return "masculino";
-            case "f": return "femenino";
-            default:
-                System.out.println("Opción no válida. Intenta nuevamente.");
+            switch (opcion) {
+                case "m": return "masculino";
+                case "f": return "femenino";
+                default:
+                    System.out.println("Opción no válida. Intenta nuevamente.");
+            }
         }
     }
+
+    public static String capitalize(String str) {
+        if (str == null || str.isEmpty()) return str;
+        return str.substring(0,1).toUpperCase() + str.substring(1);
+    }
+
 }
