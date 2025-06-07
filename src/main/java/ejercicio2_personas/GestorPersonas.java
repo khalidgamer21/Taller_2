@@ -56,6 +56,14 @@ public class GestorPersonas {
                 .count();
         System.out.println("Cantidad de personas mayores de edad: " + mayoresEdad);
 
+        // d. Personas con nombre que empieza con "A"
+        System.out.println("Personas con nombre que empieza con 'A':");
+        personas.stream()
+                .filter(p -> p.getNombre().toLowerCase().startsWith("a"))
+                .forEach(p -> System.out.println("  - " + p.getNombre()));
+
+
+
 
 
 
