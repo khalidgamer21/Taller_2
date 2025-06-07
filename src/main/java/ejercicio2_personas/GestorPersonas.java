@@ -68,6 +68,16 @@ public class GestorPersonas {
                 .filter(p -> p.getApellido().toLowerCase().contains("m"))
                 .forEach(p -> System.out.println("  - " + p.getApellido()));
 
+        // Punto 3 - operaciones con lambdas
+        System.out.println("\n=== Punto 3: Operaciones Avanzadas ===");
+
+        // a. Sueldo de 8h para directores hombres
+        personas.stream()
+                .filter(p -> p.getCargo().equals("director") && p.getGenero().equals("M"))
+                .peek(p -> System.out.print("Nombre: " + p.getNombre() + " " + p.getApellido() + " "))
+                .map(p -> p.getSueldoHora() * 8)
+                .forEach(sueldo -> System.out.println("Sueldo por 8 horas: $" + sueldo));
+
 
 
 
