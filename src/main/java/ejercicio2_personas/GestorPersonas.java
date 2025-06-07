@@ -43,6 +43,15 @@ public class GestorPersonas {
         long totalPersonas = personas.stream().count();
         System.out.println("Cantidad total de personas: " + totalPersonas);
 
+        // b. Promedio de edades
+        double promedioEdad = personas.stream()
+                .mapToInt(Persona::getEdad)
+                .average()
+                .orElse(0);
+        System.out.println("Promedio de edades: " + promedioEdad);
+
+
+
 
     }
 }
