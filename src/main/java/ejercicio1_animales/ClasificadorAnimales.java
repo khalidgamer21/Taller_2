@@ -41,3 +41,23 @@ public class ClasificadorAnimales {
 
     }
 }
+
+
+private static String seleccionarTipo(Scanner scanner) {
+    while (true) {
+        System.out.println("Selecciona el tipo de animal:");
+        System.out.println("1. Terrestre");
+        System.out.println("2. Acuático");
+        System.out.println("3. Aéreo");
+        System.out.print("Opción: ");
+        String opcion = scanner.nextLine();
+
+        switch (opcion.toLowerCase()) {
+            case "1": case "t": return "terrestre";
+            case "2": case "a": return "acuatico";
+            case "3": case "e": return "aereo";
+            default:
+                System.out.println("Opción no válida. Intenta nuevamente.");
+        }
+    }
+}
