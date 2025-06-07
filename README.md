@@ -27,7 +27,7 @@ Este proyecto en Java se divide en **dos ejercicios principales**, enfocados en:
 - Se muestra la lista final de animales clasificados por tipo.
 
 ### 🧪 Tecnologías usadas
-- Java 8+
+- Java 
 - Scanner
 - Colecciones (`ArrayList`, `TreeMap`)
 - Condicionales (`switch`)
@@ -69,7 +69,7 @@ Después de registrar múltiples personas por consola, se realizaron las siguien
 
 ## 🧪 Tecnologías usadas en el segundo punto
 
-- Java 8+
+- Java 
 - `List`, `ArrayList`
 - `Stream API`
   - `filter()`, `map()`, `forEach()`, `peek()`, `count()`, `average()`, `findFirst()`, `max()`
